@@ -15,8 +15,8 @@
     </header>
     <main>
         <div class="buttons">
-            <button onclick="window.location.href = 'Lab1.html';">Лабораторна робота 1</button></a>
-            <button onclick="window.location.href = 'Lab2.html';">Лабораторна робота 2</button></a>
+            <button onclick="window.location.href = 'index.html';">Лабораторна робота 1</button>
+            <button onclick="window.location.href = 'Lab2.html';" >Лабораторна робота 2</button>
             <button>Лабораторна робота 3</button>
             <button>Лабораторна робота 4</button>
             <button>Лабораторна робота 5</button>
@@ -26,7 +26,29 @@
             <button>Лабораторна робота 9</button>
         </div>
 
+        <div class="labs">
+            <div class="labsButton">
+                <button onclick="firstButton()">Опис предметної області</button>
+                <button onclick="secondButton()">Тема Мета місце розташування лаби 1</button>
+                <button>Структура документу</button>
+                <button onclick="thirdButton()" class="smallButton">HTML-код таблиць</button>
+                <button onclick="fourthButton()" class="smallButton">HTML-код форми</button>
+                <button onclick="fifthButton()" class="smallButton">HTML-код зображення</button>
+                <button onclick="conclusionButton()">Висновки</button>
+
+            </div>
+
+
+            <div class="text" id="text">
+                
+            </div>
+        </div>
+
+
     </main>
     <footer></footer>
+   
+
+    <script src="Lab1.js"></script>
 </body>
 </html>
