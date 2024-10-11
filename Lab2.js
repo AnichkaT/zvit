@@ -59,7 +59,16 @@ function thirdButton() {
     'margin: 10px ;'+
     'text-align: center;'+
     '} </pre>';
-
+    
+    const firstImage = document.createElement('img');
+    firstImage.src = 'Screenshot 2024-10-09 163441.png'; 
+    firstImage.alt = 'Зображення'; 
+    textDiv.appendChild(firstImage);
+    textDiv.innerHTML +='</br>';
+    const secondImage = document.createElement('img');
+    secondImage.src = 'Screenshot 2024-10-09 163948.png'; 
+    secondImage.alt = 'Зображення'; 
+    textDiv.appendChild(secondImage);
 
     
 }
@@ -80,6 +89,19 @@ function fourthButton() {
     'text-align: center;'+
     '} </pre>';
 
+    const firstImage = document.createElement('img');
+    firstImage.src = 'Screenshot 2024-10-09 163441.png'; 
+    firstImage.alt = 'Зображення'; 
+    textDiv.appendChild(firstImage);
+    textDiv.innerHTML +='</br>';
+    const secondImage = document.createElement('img');
+    secondImage.src = 'Screenshot 2024-10-09 163849.png'; 
+    secondImage.alt = 'Зображення'; 
+    textDiv.appendChild(secondImage);
+
+
+
+
     
 }
 
@@ -93,6 +115,18 @@ function fifthButton() {
     'color: #04AA6D;'+
     'text-align: center;'+
     '} </pre>';
+
+    const firstImage = document.createElement('img');
+    firstImage.src = 'Screenshot 2024-10-09 164511.png'; 
+    firstImage.alt = 'Зображення'; 
+    textDiv.appendChild(firstImage);
+    textDiv.innerHTML +='</br>';
+    const secondImage = document.createElement('img');
+    secondImage.src = 'Screenshot 2024-10-09 164459.png'; 
+    secondImage.alt = 'Зображення'; 
+    textDiv.appendChild(secondImage);
+
+
     
 }
 
@@ -116,4 +150,26 @@ function conclusionButton() {
     
 }
 
+function sixButton() {
+    var textDiv = document.getElementById('text');
 
+    textDiv.textContent = '';
+    textDiv.innerHTML ='<p>Приклади стилізації тексту</p>';
+    textDiv.innerHTML +='<img src="Screenshot 2024-10-09 171726.png" alt="Girl in a jacket" ></br>';
+    textDiv.innerHTML +='<img src="Screenshot 2024-10-09 171715.png" alt="Girl in a jacket" ></br>';
+    textDiv.innerHTML +='<img src="Screenshot 2024-10-09 171845.png" alt="Girl in a jacket" ></br>';
+
+
+
+    textDiv.innerHTML +='<p>Приклади стилізації таблиці</p>';
+    textDiv.innerHTML +='<img src="Screenshot 2024-10-03 154825.png" alt="Girl in a jacket" ></br>';
+    textDiv.innerHTML +='<img src="Screenshot 2024-10-09 172036.png" alt="Girl in a jacket" ></br>';
+    textDiv.innerHTML +='<img src="Screenshot 2024-10-09 164753.png" alt="Girl in a jacket" ></br>';
+
+   
+    textDiv.innerHTML +='<p>Приклади стилізації списків</p>';
+    textDiv.innerHTML +='<img src="Screenshot 2024-10-09 172425.png" alt="Girl in a jacket" ></br>';
+    textDiv.innerHTML +='<img src="Screenshot 2024-10-09 172503.png" alt="Girl in a jacket" ></br>';
+    textDiv.innerHTML +='<img src="Screenshot 2024-10-09 172519.png" alt="Girl in a jacket" ></br>';
+    
+}

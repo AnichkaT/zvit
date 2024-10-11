@@ -60,12 +60,17 @@ function thirdButton() {
     textDiv.textContent = '';
 
     textDiv.innerHTML = ' <p> Код таблиць виглядає наступним чином </p>';
-    const imageUrl = 'Screenshot 2024-10-03 154825.png';
-    
-    const newImage = document.createElement('img');
-    newImage.src = imageUrl; 
-    newImage.alt = 'Зображення'; 
-    textDiv.appendChild(newImage);
+
+    const firstImage = document.createElement('img');
+    firstImage.src = 'Screenshot 2024-10-03 154825.png'; 
+    firstImage.alt = 'Зображення'; 
+    textDiv.appendChild(firstImage);
+    textDiv.innerHTML +='</br>';
+    const secondImage = document.createElement('img');
+    secondImage.src = 'Screenshot 2024-10-09 164753.png'; 
+    secondImage.alt = 'Зображення'; 
+    textDiv.appendChild(secondImage);
+
     
 }
 
@@ -75,12 +80,16 @@ function fourthButton() {
     textDiv.textContent = '';
 
     textDiv.innerHTML = ' <p> Код форми виглядає наступним чином </p>';
-    const imageUrl = 'Screenshot 2024-10-03 155108.png';
-    
-    const newImage = document.createElement('img');
-    newImage.src = imageUrl; 
-    newImage.alt = 'Зображення'; 
-    textDiv.appendChild(newImage);
+
+    const firstImage = document.createElement('img');
+    firstImage.src = 'Screenshot 2024-10-03 155108.png'; 
+    firstImage.alt = 'Зображення'; 
+    textDiv.appendChild(firstImage);
+    textDiv.innerHTML +='</br>';
+    const secondImage = document.createElement('img');
+    secondImage.src = 'Screenshot 2024-10-09 164839.png'; 
+    secondImage.alt = 'Зображення'; 
+    textDiv.appendChild(secondImage);
     
 }
 
@@ -96,6 +105,8 @@ function fifthButton() {
     newImage.src = imageUrl; 
     newImage.alt = 'Зображення'; 
     textDiv.appendChild(newImage);
+
+    textDiv.innerHTML += ' <img src="https://www.w3schools.com/tags/img_girl.jpg" alt="Girl in a jacket" width="500" height="600">';
     
 }
 
