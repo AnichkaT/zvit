@@ -62,13 +62,14 @@ function thirdButton() {
     textDiv.innerHTML = ' <p> Код таблиць виглядає наступним чином </p>';
 
     const firstImage = document.createElement('img');
-    firstImage.src = 'Screenshot 2024-10-03 154825.png'; 
+    firstImage.src = 'Lab1/Screenshot 2024-10-03 154825.png'; 
     firstImage.alt = 'Зображення'; 
     textDiv.appendChild(firstImage);
     textDiv.innerHTML +='</br>';
     const secondImage = document.createElement('img');
-    secondImage.src = 'Screenshot 2024-10-09 164753.png'; 
+    secondImage.src = 'Lab1/Screenshot 2024-10-09 164753.png'; 
     secondImage.alt = 'Зображення'; 
+    secondImage.style='max-width: 100%; height: auto;"';
     textDiv.appendChild(secondImage);
 
     
@@ -82,12 +83,12 @@ function fourthButton() {
     textDiv.innerHTML = ' <p> Код форми виглядає наступним чином </p>';
 
     const firstImage = document.createElement('img');
-    firstImage.src = 'Screenshot 2024-10-03 155108.png'; 
+    firstImage.src = 'Lab1/Screenshot 2024-10-03 155108.png'; 
     firstImage.alt = 'Зображення'; 
     textDiv.appendChild(firstImage);
     textDiv.innerHTML +='</br>';
     const secondImage = document.createElement('img');
-    secondImage.src = 'Screenshot 2024-10-09 164839.png'; 
+    secondImage.src = 'Lab1/Screenshot 2024-10-09 164839.png'; 
     secondImage.alt = 'Зображення'; 
     textDiv.appendChild(secondImage);
     
@@ -99,7 +100,7 @@ function fifthButton() {
     textDiv.textContent = '';
 
     textDiv.innerHTML = ' <p> Код фото виглядає наступним чином </p>';
-    const imageUrl = 'Screenshot 2024-10-03 155521.png';
+    const imageUrl = 'Lab1/Screenshot 2024-10-03 155521.png';
     
     const newImage = document.createElement('img');
     newImage.src = imageUrl; 
