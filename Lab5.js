@@ -68,7 +68,7 @@ function fourthButton() {
     var textDiv = document.getElementById('text');
 
     textDiv.textContent = '';
-    textDiv.innerHTML +='<p>Завдання 3</p>';
+    textDiv.innerHTML +='<p>Завдання 4</p>';
     textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task3/Screenshot 2024-11-13 194847.png"  ></br>';
     
     textDiv.innerHTML +='<p>Js код</p>';
@@ -85,7 +85,7 @@ function fifthButton() {
     var textDiv = document.getElementById('text');
 
     textDiv.textContent = '';
-    textDiv.innerHTML +='<p>Завдання 3</p>';
+    textDiv.innerHTML +='<p>Завдання 5</p>';
     textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task4/Screenshot 2024-11-13 202031.png"  ></br>';
     
     textDiv.innerHTML +='<p>Js код</p>';
@@ -99,7 +99,29 @@ function fifthButton() {
 
 }
 
+function sixButton() {
+    var textDiv = document.getElementById('text');
 
+    textDiv.textContent = '';
+    textDiv.innerHTML +='<p>Завдання 5</p>';
+    textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task5/Screenshot 2024-11-21 172536.png"  ></br>';
+    
+    textDiv.innerHTML +='<p>HTMl код</p>';
+    textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task5/Screenshot 2024-11-21 172325.png"  ></br>';
+   
+    textDiv.innerHTML +='<p>CSS код</p>';
+    textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task5/Screenshot 2024-11-21 171627.png"  ></br>';
+    textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task5/Screenshot 2024-11-21 171638.png"  ></br>';
+    
+    textDiv.innerHTML +='<p>Js код</p>';
+    textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task5/Screenshot 2024-11-21 171653.png"  ></br>';
+    textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task5/Screenshot 2024-11-21 171703.png"  ></br>';
+    
+    textDiv.innerHTML +='<p>Результат </p>';
+    textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task5/Screenshot 2024-11-21 172339.png"  ></br>';
+    textDiv.innerHTML += '<button onclick="window.open(\'Lab5/Task5/lab5_Task5.html\', \'_blank\');">Завдання 5</button>';
+
+}
 
 
 function conclusionButton() {
