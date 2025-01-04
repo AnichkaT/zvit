@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="numberList">
+        <li>1</li>
+        <li>4</li>
+        <li>8</li>
+        <li>16</li>    
+        <li>20</li>
+        <li>30</li>
+    </ul>'
+    <button id="squareButton"> Піднести до квадрата</button>
+
+    <script>
+        document.getElementById('squareButton').addEventListener('click', function() {
+        const listItems = document.querySelectorAll('#numberList li');
+        listItems.forEach(item => {
+            const currentValue = BigInt(item.textContent);
+            const squaredValue = currentValue * currentValue;
+            item.textContent = squaredValue.toString();
+        });
+        });
+    
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

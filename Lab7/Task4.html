@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .task4 {
+            display: flex;
+            flex-direction: column;
+            background-color: #04AA6D; 
+            padding: auto;
+            width: fit-content;
+            height: fit-content;
+        }
+        .task41 {
+            display: flex;
+            flex-direction: block;
+        }
+
+        .task4 button{
+             background-color: white;
+            border: 5px black; 
+            color: black;
+            margin: 15px ;
+            padding: auto;
+            font-size: 18px;
+        }
+
+        #square {
+            width: 100px;
+            height: 100px;
+            background-color: none;
+            border: dashed red;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "task4"> 
+        <div id="square"></div>'
+        <div class = "task41">
+            <button id="decrease">Зменшити</button>
+           <button id="increase" >Збільшити</button>
+        </div>
+    </div>
+
+    <script>
+        const square = document.getElementById('square');
+    const decreaseButton = document.getElementById('decrease');
+    const increaseButton = document.getElementById('increase');
+
+    decreaseButton.addEventListener('click', () => {
+        const currentWidth = square.offsetWidth;
+        const currentHeight = square.offsetHeight;
+        square.style.width = `${currentWidth - 15}px`;
+        square.style.height = `${currentHeight - 15}px`;
+    });
+
+    increaseButton.addEventListener('click', () => {
+        const currentWidth = square.offsetWidth;
+        const currentHeight = square.offsetHeight;
+        square.style.width = `${currentWidth + 15}px`;
+        square.style.height = `${currentHeight + 15}px`;
+    });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .feedback-form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feedback-form label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    .feedback-form button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .feedback-form button:hover {
+      background-color: #45a049;
+    }
+
+    .feedback-form button:active {
+      background-color: #397e36;
+    }
+
+    .feedback-form input:focus,
+    .feedback-form textarea:focus {
+      border-color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <form class="feedback-form" autocomplete="off">
+      <label>
+        Email
+        <input type="email" name="email" autofocus />
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="8"></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.querySelector('.feedback-form');
+    const emailField = form.querySelector('[name="email"]');
+    const messageField = form.querySelector('[name="message"]');
+
+    const formData = { email: "", message: "" };
+
+
+    const savedFormData = JSON.parse(localStorage.getItem("feedback-form-state"));
+    if (savedFormData) {
+      formData.email = savedFormData.email || "";
+      formData.message = savedFormData.message || "";
+      emailField.value = formData.email;
+      messageField.value = formData.message;
+    }
+
+    form.addEventListener('input', (event) => {
+      const { name, value } = event.target;
+      formData[name] = value.trim();
+      localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const email = emailField.value.trim();
+      const message = messageField.value.trim();
+
+      if (!email || !message) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      console.log({ email, message });
+     
+      localStorage.removeItem('feedback-form-state');
+      emailField.value = "";
+      messageField.value = "";
+    });
+  </script>
+</body>
+</html>

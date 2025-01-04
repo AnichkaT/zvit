@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #ebdada;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+    }
+    .galleryItem {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .gallery img {
+      display: block;
+      width: 125px;
+      height: 125px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <ul class="gallery"></ul>
+
+  <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+  <script>
+    const images = [
+      {
+        preview: 'download (1).jpg',
+        original: 'download (1).jpg',
+        description: 'Image 1',
+      },
+      {
+        preview: 'images.jpg',
+        original: 'images.jpg',
+        description: 'Image 2',
+      },
+      {
+        preview: 'download (2).jpg',
+        original: 'download (2).jpg',
+        description: 'Image 3',
+      },
+      {
+        preview: 'images (1).jpg',
+        original: 'images (1).jpg',
+        description: 'Image 4',
+      },
+      {
+        preview: '6da0dfef719804546c770c777951db63.jpg',
+        original: '6da0dfef719804546c770c777951db63.jpg',
+        description: 'Image 5',
+      },
+      {
+        preview: 'images (2).jpg',
+        original: 'images (2).jpg',
+        description: 'Image 6',
+      },
+      {
+        preview: 'images (3).jpg',
+        original: 'images (3).jpg',
+        description: 'Image 7',
+      },
+      {
+        preview: 'images (4).jpg',
+        original: 'images (4).jpg',
+        description: 'Image 8',
+      },
+      {
+        preview: 'images (5).jpg',
+        original: 'images (5).jpg',
+        description: 'Image 9',
+      },
+    ];
+
+    const galleryContainer = document.querySelector('.gallery');
+
+    const galleryMarkup = images
+      .map(
+        ({ preview,original, description }) => `
+          <li class="galleryItem">
+            <img
+            src="${preview}"
+            data-source="${original}"
+            alt="${description}"
+            />
+          </li>
+        `
+      )
+      .join('');
+
+    galleryContainer.innerHTML = galleryMarkup;
+
+    galleryContainer.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const target = event.target;
+      if (target.tagName !== 'IMG') {
+        return;
+      }
+
+      const largeImageURL = target.dataset.source;
+
+      const instance = basicLightbox.create(`
+        <div class="lightbox-content">
+          <img src="${largeImageURL}" alt="${target.alt}" />
+        </div>
+      `);
+
+      instance.show();
+    });
+  </script>
+</body>
+</html>

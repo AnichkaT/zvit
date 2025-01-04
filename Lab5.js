@@ -68,7 +68,7 @@ function fourthButton() {
     var textDiv = document.getElementById('text');
 
     textDiv.textContent = '';
-    textDiv.innerHTML +='<p>Завдання 4</p>';
+    textDiv.innerHTML +='<p>Завдання 3</p>';
     textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task3/Screenshot 2024-11-13 194847.png"  ></br>';
     
     textDiv.innerHTML +='<p>Js код</p>';
@@ -85,7 +85,7 @@ function fifthButton() {
     var textDiv = document.getElementById('text');
 
     textDiv.textContent = '';
-    textDiv.innerHTML +='<p>Завдання 5</p>';
+    textDiv.innerHTML +='<p>Завдання 4</p>';
     textDiv.innerHTML +='<img style="max-width: 100%; height: auto;" src="Lab5/Task4/Screenshot 2024-11-13 202031.png"  ></br>';
     
     textDiv.innerHTML +='<p>Js код</p>';
